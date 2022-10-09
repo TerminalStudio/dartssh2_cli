@@ -1,5 +1,5 @@
 name: dartssh2_cli
-description: A sample command-line application.
+description: The command-line tools built with dartssh2. Includes dartssh and dartsftp.
 version: 1.0.0
 repository: https://github.com/TerminalStudio/dartssh2_cli
 
