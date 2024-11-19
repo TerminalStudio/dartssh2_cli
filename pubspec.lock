@@ -98,7 +98,7 @@ packages:
       name: dartssh2
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.7.2+3"
+    version: "2.8.2"
   ffi:
     dependency: transitive
     description:
