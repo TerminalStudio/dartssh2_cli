@@ -51,7 +51,7 @@ Future<void> forwardLocal(SSHClient client, SSHForwardConfig config) async {
       localHost: connection.address.address,
       localPort: connection.port,
     );
-    connection.pipe(forward.sink);
+    connection.cast().pipe(forward.sink);
     forward.stream.cast<List<int>>().pipe(connection);
     connection.done.then((_) => forward.close());
   }
@@ -78,7 +78,7 @@ Future<void> forwardRemote(SSHClient client, SSHForwardConfig config) async {
       config.destinationPort,
     );
     connection.stream.cast<List<int>>().pipe(socket);
-    socket.pipe(connection.sink);
+    socket.cast().pipe(connection.sink);
     socket.done.then((_) => connection.close());
   }
 }
